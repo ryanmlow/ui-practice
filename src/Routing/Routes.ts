@@ -1,0 +1,82 @@
+import testimonialCardCodeMd from "../Tasks/TestimonialCard/uiMarkdown";
+import TestimonialCard, {
+  testimonialText,
+} from "../Tasks/TestimonialCard/TestimonialCard";
+import testimonialCardTestCodeMd from "../Tasks/TestimonialCard/testMarkdown";
+import { JSX } from "react";
+import Accordion from "../Tasks/Accordion/Accordion";
+import accordionCodeMarkdown from "../Tasks/Accordion/uiMarkdown";
+import accordionTestMarkdown from "../Tasks/Accordion/testMarkdown";
+import accordionConfig from "../Tasks/Accordion/accordionConfig";
+import tabsCodeMarkdown from "../Tasks/Tabs/uiMarkdown";
+import tabsTestMarkdown from "../Tasks/Tabs/testMardown";
+import Tabs from "../Tasks/Tabs/Tabs";
+import ProgressBar from "../Tasks/ProgressBar/ProgressBar";
+import ProgressBarUiMarkdown from "../Tasks/ProgressBar/uiMarkdown";
+import ProgressBarTestMarkdown from "../Tasks/ProgressBar/testMarkdown";
+
+export type RouteType = {
+  id: number;
+  title: string;
+  description: string;
+  name: string;
+  path: string;
+  component: (props: never) => JSX.Element;
+  props?: Record<string, unknown>;
+  codeMd: string;
+  testMd: string;
+};
+
+export const routes: RouteType[] = [
+  {
+    id: 1,
+    title: "Testimonial Card",
+    description:
+      "A card featuring a user testimonial, including a profile image, name, username, and the testimonial body.",
+    name: "Testimonial Card",
+    path: "testimonial-card",
+    component: TestimonialCard,
+    props: {
+      name: "Sarah Dole",
+      handle: "@sarahdole",
+      testimonial: testimonialText,
+    },
+    codeMd: testimonialCardCodeMd,
+    testMd: testimonialCardTestCodeMd,
+  },
+  {
+    id: 2,
+    title: "Accordion",
+    description:
+      "An Accordion component that displays a list of vertically stacked sections that each contain a title and content snippet.",
+    name: "Accordion",
+    path: "accordion",
+    component: Accordion,
+    props: { accordionConfig },
+    codeMd: accordionCodeMarkdown,
+    testMd: accordionTestMarkdown,
+  },
+  {
+    id: 3,
+    title: "Tabs",
+    description:
+      "A tabs component that displays one panel of content at a time depending on the active tab element.",
+    name: "Tabs",
+    path: "tabs",
+    component: Tabs,
+    props: { tabs: ["HTML", "CSS", "Javascript"] },
+    codeMd: tabsCodeMarkdown,
+    testMd: tabsTestMarkdown,
+  },
+  {
+    id: 4,
+    title: "Progress Bars",
+    description:
+      "An app where clicking the 'Add' button adds progress bars to the page. The progress bars fill up gradually as soon as they are shown.",
+    name: "Progress Bars",
+    path: "progress-bars",
+    component: ProgressBar,
+    codeMd: ProgressBarUiMarkdown,
+    testMd: ProgressBarTestMarkdown,
+  },
+];
