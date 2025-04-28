@@ -4,6 +4,7 @@ import { useState } from "react";
 import accordionPreview from "./assets/accordion.png";
 import tabsPreview from "./assets/tabs.png";
 import progressBarPreview from "./assets/progress-bars.png";
+import diceRollerPreview from "./assets/dice-roller.png";
 
 const previewImgMap = [
   {
@@ -21,6 +22,10 @@ const previewImgMap = [
   {
     titleRef: "Progress Bars",
     link: progressBarPreview,
+  },
+  {
+    titleRef: "Dice Roller",
+    link: diceRollerPreview,
   },
 ];
 
@@ -50,7 +55,6 @@ const Landing = () => {
     const imgPreview = previewImgMap.find(
       (img) => img.titleRef === taskTitle,
     )?.link;
-    console.log(imgPreview);
     setActivePreview(imgPreview);
   };
 

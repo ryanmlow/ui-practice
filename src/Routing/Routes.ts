@@ -14,6 +14,9 @@ import Tabs from "../Tasks/Tabs/Tabs";
 import ProgressBar from "../Tasks/ProgressBar/ProgressBar";
 import ProgressBarUiMarkdown from "../Tasks/ProgressBar/uiMarkdown";
 import ProgressBarTestMarkdown from "../Tasks/ProgressBar/testMarkdown";
+import DiceRoller from "../Tasks/DiceRoller/DiceRoller";
+import diceRollerUiMarkdown from "../Tasks/DiceRoller/uiMarkdown";
+import diceRollerTestMarkdown from "../Tasks/DiceRoller/testMarkdown";
 
 export type RouteType = {
   id: number;
@@ -78,5 +81,16 @@ export const routes: RouteType[] = [
     component: ProgressBar,
     codeMd: ProgressBarUiMarkdown,
     testMd: ProgressBarTestMarkdown,
+  },
+  {
+    id: 5,
+    title: "Dice Roller",
+    description:
+      "A dice roller app that simulates the results of rolling a specified number of 6-sided dice.",
+    name: "Dice Roller",
+    path: "dice-roller",
+    component: DiceRoller,
+    codeMd: diceRollerUiMarkdown,
+    testMd: diceRollerTestMarkdown,
   },
 ];
