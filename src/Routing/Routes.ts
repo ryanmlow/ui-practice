@@ -17,6 +17,9 @@ import ProgressBarTestMarkdown from "../Tasks/ProgressBar/testMarkdown";
 import DiceRoller from "../Tasks/DiceRoller/DiceRoller";
 import diceRollerUiMarkdown from "../Tasks/DiceRoller/uiMarkdown";
 import diceRollerTestMarkdown from "../Tasks/DiceRoller/testMarkdown";
+import TodoList from "../Tasks/TodoList/TodoList";
+import TodoUiMarkdown from "../Tasks/TodoList/uiMarkdown";
+import TodoListTestMarkdown from "../Tasks/TodoList/testMarkdown";
 
 export type RouteType = {
   id: number;
@@ -92,5 +95,16 @@ export const routes: RouteType[] = [
     component: DiceRoller,
     codeMd: diceRollerUiMarkdown,
     testMd: diceRollerTestMarkdown,
+  },
+  {
+    id: 6,
+    title: "Todo List",
+    description:
+      "A simple todo list that allows users to add, remove, and mark tasks as completed.",
+    name: "Todo list",
+    path: "todo-list",
+    component: TodoList,
+    codeMd: TodoUiMarkdown,
+    testMd: TodoListTestMarkdown,
   },
 ];

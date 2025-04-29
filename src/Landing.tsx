@@ -5,6 +5,7 @@ import accordionPreview from "./assets/accordion.png";
 import tabsPreview from "./assets/tabs.png";
 import progressBarPreview from "./assets/progress-bars.png";
 import diceRollerPreview from "./assets/dice-roller.png";
+import todoListPreview from "./assets/todo-list.png";
 
 const previewImgMap = [
   {
@@ -26,6 +27,10 @@ const previewImgMap = [
   {
     titleRef: "Dice Roller",
     link: diceRollerPreview,
+  },
+  {
+    titleRef: "Todo List",
+    link: todoListPreview,
   },
 ];
 
