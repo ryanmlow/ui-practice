@@ -1,5 +1,5 @@
 {
-  "homepage": "ryanmlow.github.io/ui-practice,",
+  "homepage": "https://ryanmlow.github.io/ui-practice,",
   "name": "ui-practice",
   "private": true,
   "version": "0.0.0",
@@ -12,7 +12,7 @@
     "test:coverage": "vitest run --coverage",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
