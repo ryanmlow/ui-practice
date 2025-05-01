@@ -45,7 +45,7 @@ const ProgressBar = () => {
   return (
     <>
       <button
-        className="mb-8 cursor-pointer rounded-2xl bg-teal-500 shadow-md shadow-teal-200 hover:shadow-lg"
+        className="mb-8 cursor-pointer rounded-2xl bg-teal-500 px-4 py-2 shadow-md shadow-teal-200 hover:shadow-lg"
         onClick={() => addProgressBar()}
       >
         Add

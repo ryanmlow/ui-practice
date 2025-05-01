@@ -41,7 +41,7 @@ const DiceRoller = () => {
           onChange={(e) => handleChange(+e.target.value)}
         />
         <button
-          className="mr-8 ml-auto cursor-pointer rounded-lg border-4 border-gray-600 bg-gray-100 text-black hover:bg-gray-600 hover:text-white"
+          className="mr-8 ml-auto cursor-pointer rounded-lg border-4 border-gray-600 bg-gray-100 px-4 py-2 text-black hover:bg-gray-600 hover:text-white"
           onClick={generateDiceRoll}
         >
           Roll

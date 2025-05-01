@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Landing from "../Landing";
 import { routes, RouteType } from "./Routes";
 import UiTask from "../pages/UiTask/UiTask";
@@ -34,35 +34,30 @@ const updateMdMap = (route: RouteType) => {
 
 export const AppRoutes = () => {
   return (
-    <Router>
-      <Routes>
-        {defaultRoutes.map((route) => (
+    <Routes>
+      {defaultRoutes.map((route) => (
+        <Route
+          key={route.name}
+          path={route.path}
+          element={<route.component />}
+        />
+      ))}
+      {routes.map((route) => {
+        updateMdMap(route);
+        return (
           <Route
             key={route.name}
-            path={route.path}
-            element={<route.component />}
-          />
-        ))}
-        <Route path={`/${PATHS.LANDING}/${PATHS.UI_TASK}`}>
-          {routes.map((route) => {
-            console.log(route);
-            updateMdMap(route);
-            return (
-              <Route
-                key={route.name}
-                path={route.path}
-                element={
-                  <UiTask
-                    codeLabel={route.name}
-                    renderComponent={route.component}
-                    componentProps={route.props}
-                  />
-                }
+            path={`/${PATHS.LANDING}/${PATHS.UI_TASK}/${route.path}`}
+            element={
+              <UiTask
+                codeLabel={route.name}
+                renderComponent={route.component}
+                componentProps={route.props}
               />
-            );
-          })}
-        </Route>
-      </Routes>
-    </Router>
+            }
+          />
+        );
+      })}
+    </Routes>
   );
 };
