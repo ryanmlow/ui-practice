@@ -5,10 +5,15 @@ import UiTask from "../pages/UiTask/UiTask";
 import { uiMarkdownMap } from "../pages/UiTask/uiMarkdownMap";
 import { testMarkdownMap } from "../pages/UiTask/testMarkdownMap";
 
+export enum PATHS {
+  LANDING = "ui-practice",
+  UI_TASK = "ui-task",
+}
+
 const defaultRoutes = [
   {
     name: "landing",
-    path: "/ui-practice",
+    path: `/${PATHS.LANDING}`,
     component: () => <Landing />,
   },
   {
@@ -38,7 +43,7 @@ export const AppRoutes = () => {
             element={<route.component />}
           />
         ))}
-        <Route path="/ui-task">
+        <Route path={`/${PATHS.LANDING}/${PATHS.UI_TASK}`}>
           {routes.map((route) => {
             console.log(route);
             updateMdMap(route);

@@ -7,6 +7,7 @@ import progressBarPreview from "./assets/progress-bars.png";
 import diceRollerPreview from "./assets/dice-roller.png";
 import todoListPreview from "./assets/todo-list.png";
 import digitalClockPreview from "./assets/digital-clock.png";
+import { PATHS } from "./Routing/AppRoutes";
 
 const previewImgMap = [
   {
@@ -73,7 +74,7 @@ const Landing = () => {
       <div className="xxl:grid-cols-3 grid w-full flex-1 grid-cols-1 gap-8 p-8 xl:grid-cols-2">
         {routes.map((card) => (
           <Link
-            to={`ui-task/${card.path}`}
+            to={`/${PATHS.LANDING}/${PATHS.UI_TASK}/${card.path}`}
             key={card.id}
             className="flex min-h-80 flex-col items-center justify-center rounded-lg border-4 border-indigo-300 bg-amber-50 px-5 py-10 text-center text-blue-900 transition duration-200 hover:-translate-y-2 hover:border-white hover:bg-gray-600 hover:text-white"
             onMouseOver={() => getImgPreviewUrl(card.title)}
