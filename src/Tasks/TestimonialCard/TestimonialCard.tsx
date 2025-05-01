@@ -14,24 +14,24 @@ const TestimonialCard = (props: CardProps) => {
   return (
     <div className="justify-self-center">
       <div
-        className="flex flex-col bg-white p-4 rounded-lg max-w-md my-auto"
+        className="mx-auto my-auto flex max-w-md flex-col rounded-lg bg-white p-4"
         role="region"
         aria-labelledby="card-title"
         aria-describedby="card-testimonial"
       >
-        <div className="flex flex-row items-center mb-4">
+        <div className="mb-4 flex flex-row items-center">
           <img
             src={thumbnail}
             alt={`Profile picture of ${name}`}
-            className="rounded-full max-h-20"
+            className="max-h-20 rounded-full"
           />
           <div className="ml-5">
-            <h3 className="text-xl text-gray-600 font-semibold">{name}</h3>
+            <h3 className="text-xl font-semibold text-gray-600">{name}</h3>
             <p className="text-gray-600">{handle}</p>
           </div>
         </div>
         <div>
-          <p className="mt-2 text-gray-700 text-left">{testimonial}</p>
+          <p className="mt-2 text-left text-gray-700">{testimonial}</p>
         </div>
       </div>
     </div>

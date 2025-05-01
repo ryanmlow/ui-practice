@@ -1,5 +1,7 @@
 Own repo for misc. UI practice
 
+Deployed [here](https://ryanmlow.github.io/ui-practice/)
+
 ## Table of Contents
 
 - [About](#about)
