@@ -1,4 +1,4 @@
-const TodoUiMarkdown = `
+const todoUiMarkdown = `
 import { useEffect, useState } from "react";
 import { MdCheckCircle, MdDeleteOutline } from "react-icons/md";
 
@@ -120,4 +120,4 @@ const TodoList = () => {
 };
 `;
 
-export default TodoUiMarkdown;
+export default todoUiMarkdown;

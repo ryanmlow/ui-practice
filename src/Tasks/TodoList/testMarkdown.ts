@@ -1,4 +1,4 @@
-const TodoListTestMarkdown = `
+const todoListTestMarkdown = `
 import { describe, it, expect } from "vitest";
 import { render, fireEvent } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
@@ -67,4 +67,4 @@ describe("Base test", () => {
 });
 `;
 
-export default TodoListTestMarkdown;
+export default todoListTestMarkdown;

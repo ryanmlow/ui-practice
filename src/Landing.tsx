@@ -6,6 +6,7 @@ import tabsPreview from "./assets/tabs.png";
 import progressBarPreview from "./assets/progress-bars.png";
 import diceRollerPreview from "./assets/dice-roller.png";
 import todoListPreview from "./assets/todo-list.png";
+import digitalClockPreview from "./assets/digital-clock.png";
 
 const previewImgMap = [
   {
@@ -31,6 +32,10 @@ const previewImgMap = [
   {
     titleRef: "Todo List",
     link: todoListPreview,
+  },
+  {
+    titleRef: "Digital Clock",
+    link: digitalClockPreview,
   },
 ];
 

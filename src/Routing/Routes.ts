@@ -18,8 +18,11 @@ import DiceRoller from "../Tasks/DiceRoller/DiceRoller";
 import diceRollerUiMarkdown from "../Tasks/DiceRoller/uiMarkdown";
 import diceRollerTestMarkdown from "../Tasks/DiceRoller/testMarkdown";
 import TodoList from "../Tasks/TodoList/TodoList";
-import TodoUiMarkdown from "../Tasks/TodoList/uiMarkdown";
-import TodoListTestMarkdown from "../Tasks/TodoList/testMarkdown";
+import todoUiMarkdown from "../Tasks/TodoList/uiMarkdown";
+import todoListTestMarkdown from "../Tasks/TodoList/testMarkdown";
+import DigitalClock from "../Tasks/DigitalClock/DigitalClock";
+import digitalClockUiMarkdown from "../Tasks/DigitalClock/uiMarkdown";
+import digitalClockTestMarkdown from "../Tasks/DigitalClock/testMarkdown";
 
 export type RouteType = {
   id: number;
@@ -104,7 +107,17 @@ export const routes: RouteType[] = [
     name: "Todo list",
     path: "todo-list",
     component: TodoList,
-    codeMd: TodoUiMarkdown,
-    testMd: TodoListTestMarkdown,
+    codeMd: todoUiMarkdown,
+    testMd: todoListTestMarkdown,
+  },
+  {
+    id: 7,
+    title: "Digital Clock",
+    description: "A digital clock that shows the current time",
+    name: "Digital Clock",
+    path: "digital-clock",
+    component: DigitalClock,
+    codeMd: digitalClockUiMarkdown,
+    testMd: digitalClockTestMarkdown,
   },
 ];
