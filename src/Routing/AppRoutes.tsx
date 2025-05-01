@@ -8,7 +8,7 @@ import { testMarkdownMap } from "../pages/UiTask/testMarkdownMap";
 const defaultRoutes = [
   {
     name: "landing",
-    path: "/",
+    path: "/ui-practice",
     component: () => <Landing />,
   },
   {
