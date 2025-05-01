@@ -13,7 +13,7 @@ export enum PATHS {
 const defaultRoutes = [
   {
     name: "landing",
-    path: `/${PATHS.LANDING}`,
+    path: "/",
     component: () => <Landing />,
   },
   {
@@ -47,7 +47,7 @@ export const AppRoutes = () => {
         return (
           <Route
             key={route.name}
-            path={`/${PATHS.LANDING}/${PATHS.UI_TASK}/${route.path}`}
+            path={`/${PATHS.UI_TASK}/${route.path}`}
             element={
               <UiTask
                 codeLabel={route.name}
