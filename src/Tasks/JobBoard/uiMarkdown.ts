@@ -1,3 +1,4 @@
+const jobBoardUiMarkdown = `
 import { useState, useEffect } from "react";
 
 type JobDetail = {
@@ -41,11 +42,11 @@ const JobBoard = () => {
     for (let i = 0; i < idArr.length; i++) {
       initial.push(
         fetch(
-          `https://hacker-news.firebaseio.com/v0/item/${idArr[i]}.json`,
+          \`https://hacker-news.firebaseio.com/v0/item/\${idArr[i]}.json\`,
         ).then((res) => {
           if (!res.ok) {
             throw new Error(
-              `Failed to fetch job detail with status: ${res.status}`,
+              \`Failed to fetch job detail with status: \${res.status}\`,
             );
           }
           return res.json();
@@ -151,5 +152,6 @@ const JobBoard = () => {
     </div>
   );
 };
+`;
 
-export default JobBoard;
+export default jobBoardUiMarkdown;

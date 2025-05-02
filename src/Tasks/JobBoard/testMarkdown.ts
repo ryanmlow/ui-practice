@@ -1,3 +1,4 @@
+const jobBoardTestMarkdown = `
 import { describe, it, expect, vi, afterEach } from "vitest";
 import { render, waitFor } from "@testing-library/react";
 import JobBoard, { getDateTime, JOB_BOARD_TITLE, JOB_ID_URL } from "./JobBoard";
@@ -78,3 +79,6 @@ describe("Base test", () => {
     });
   });
 });
+`;
+
+export default jobBoardTestMarkdown;

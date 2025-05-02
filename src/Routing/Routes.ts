@@ -24,6 +24,8 @@ import DigitalClock from "../Tasks/DigitalClock/DigitalClock";
 import digitalClockUiMarkdown from "../Tasks/DigitalClock/uiMarkdown";
 import digitalClockTestMarkdown from "../Tasks/DigitalClock/testMarkdown";
 import JobBoard from "../Tasks/JobBoard/JobBoard";
+import jobBoardUiMarkdown from "../Tasks/JobBoard/uiMarkdown";
+import jobBoardTestMarkdown from "../Tasks/JobBoard/testMarkdown";
 
 export type RouteType = {
   id: number;
@@ -129,7 +131,7 @@ export const routes: RouteType[] = [
     name: "Job Board",
     path: "job-board",
     component: JobBoard,
-    codeMd: digitalClockUiMarkdown,
-    testMd: digitalClockTestMarkdown,
+    codeMd: jobBoardUiMarkdown,
+    testMd: jobBoardTestMarkdown,
   },
 ];
