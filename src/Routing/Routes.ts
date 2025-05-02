@@ -23,6 +23,7 @@ import todoListTestMarkdown from "../Tasks/TodoList/testMarkdown";
 import DigitalClock from "../Tasks/DigitalClock/DigitalClock";
 import digitalClockUiMarkdown from "../Tasks/DigitalClock/uiMarkdown";
 import digitalClockTestMarkdown from "../Tasks/DigitalClock/testMarkdown";
+import JobBoard from "../Tasks/JobBoard/JobBoard";
 
 export type RouteType = {
   id: number;
@@ -117,6 +118,17 @@ export const routes: RouteType[] = [
     name: "Digital Clock",
     path: "digital-clock",
     component: DigitalClock,
+    codeMd: digitalClockUiMarkdown,
+    testMd: digitalClockTestMarkdown,
+  },
+  {
+    id: 8,
+    title: "Job Board",
+    description:
+      "A job board that displays the latest job postings fetched from the Hacker News API, with each posting displaying the job title, poster, and date posted.",
+    name: "Job Board",
+    path: "job-board",
+    component: JobBoard,
     codeMd: digitalClockUiMarkdown,
     testMd: digitalClockTestMarkdown,
   },

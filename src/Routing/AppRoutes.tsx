@@ -6,7 +6,6 @@ import { uiMarkdownMap } from "../pages/UiTask/uiMarkdownMap";
 import { testMarkdownMap } from "../pages/UiTask/testMarkdownMap";
 
 export enum PATHS {
-  LANDING = "ui-practice",
   UI_TASK = "ui-task",
 }
 
