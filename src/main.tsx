@@ -7,7 +7,11 @@ import { HashRouter } from "react-router-dom";
 import { worker } from "./mocks/browser";
 
 if (process.env.NODE_ENV === "development") {
-  worker.start();
+  worker.start({
+    serviceWorker: {
+      url: "/ui-practice/mockServiceWorker.js",
+    },
+  });
 }
 
 createRoot(document.getElementById("root")!).render(
