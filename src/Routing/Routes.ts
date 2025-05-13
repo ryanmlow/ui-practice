@@ -39,8 +39,8 @@ export type RouteType = {
   path: string;
   component: (props: never) => JSX.Element;
   props?: Record<string, unknown>;
-  codeMd: string;
-  testMd: string;
+  codeMd?: string;
+  testMd?: string;
 };
 
 export const routes: RouteType[] = [
@@ -142,7 +142,7 @@ export const routes: RouteType[] = [
     id: 9,
     title: "Mortgage Calculator",
     description:
-      "a simple mortgage calculator widget that takes in a loan amount, interest rate, loan term, and calculates the monthly mortgage payment, total payment amount, and total interest paid.",
+      "A simple mortgage calculator widget that takes in a loan amount, interest rate, loan term, and calculates the monthly mortgage payment, total payment amount, and total interest paid.",
     name: "Mortgage Calculator",
     path: "mortgage-calculator",
     component: Mortgage,
@@ -156,7 +156,7 @@ export const routes: RouteType[] = [
     name: "Test",
     path: "test",
     component: Test,
-    codeMd: jobBoardUiMarkdown,
-    testMd: jobBoardTestMarkdown,
+    // codeMd: jobBoardUiMarkdown,
+    // testMd: jobBoardTestMarkdown,
   },
 ];
