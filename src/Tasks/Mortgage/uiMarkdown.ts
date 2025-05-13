@@ -40,7 +40,7 @@ const Mortgage = () => {
   };
 
   return (
-    <form className="mx-8 rounded-2xl bg-amber-300 p-8">
+    <form className="mx-8 rounded-2xl bg-amber-300 p-8" onSubmit={(e) => e.preventDefault}>
       <div className="mb-4 flex items-center">
         <label htmlFor="amount" className="mr-4 flex-1/4 text-black">
           Amount
@@ -116,6 +116,7 @@ const Mortgage = () => {
         </div>
       </div>
       <button
+        type="submit"
         onClick={() => calculateMonthlyPayment(formState)}
         disabled={
           formState.amount === 0 ||
