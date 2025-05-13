@@ -26,6 +26,10 @@ import digitalClockTestMarkdown from "../Tasks/DigitalClock/testMarkdown";
 import JobBoard from "../Tasks/JobBoard/JobBoard";
 import jobBoardUiMarkdown from "../Tasks/JobBoard/uiMarkdown";
 import jobBoardTestMarkdown from "../Tasks/JobBoard/testMarkdown";
+import Test from "../Tasks/Test/Test";
+import Mortgage from "../Tasks/Mortgage/Mortgage";
+import mortgageUiMarkdown from "../Tasks/Mortgage/uiMarkdown";
+import mortgageTestMarkdown from "../Tasks/Mortgage/testMarkdown";
 
 export type RouteType = {
   id: number;
@@ -131,6 +135,27 @@ export const routes: RouteType[] = [
     name: "Job Board",
     path: "job-board",
     component: JobBoard,
+    codeMd: jobBoardUiMarkdown,
+    testMd: jobBoardTestMarkdown,
+  },
+  {
+    id: 9,
+    title: "Mortgage Calculator",
+    description:
+      "a simple mortgage calculator widget that takes in a loan amount, interest rate, loan term, and calculates the monthly mortgage payment, total payment amount, and total interest paid.",
+    name: "Mortgage Calculator",
+    path: "mortgage-calculator",
+    component: Mortgage,
+    codeMd: mortgageUiMarkdown,
+    testMd: mortgageTestMarkdown,
+  },
+  {
+    id: 10,
+    title: "Test",
+    description: "",
+    name: "Test",
+    path: "test",
+    component: Test,
     codeMd: jobBoardUiMarkdown,
     testMd: jobBoardTestMarkdown,
   },

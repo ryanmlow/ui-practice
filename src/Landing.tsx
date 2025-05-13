@@ -43,6 +43,10 @@ const previewImgMap = [
     titleRef: "Job Board",
     link: jobBoardPreview,
   },
+  {
+    titleRef: "Test",
+    link: jobBoardPreview,
+  },
 ];
 
 const Preview = ({ previewUrl }: { previewUrl: string | undefined }) => {

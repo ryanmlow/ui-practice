@@ -7,9 +7,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* --default-background: #242424; */
-  /* --background-light-gray: #b4aeae;
-  background-color: var(--default-background); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,6 +28,12 @@ button {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media (prefers-color-scheme: light) {
