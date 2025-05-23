@@ -27,8 +27,12 @@ const defaultRoutes = [
 ];
 
 const updateMdMap = (route: RouteType) => {
-  uiMarkdownMap.set(route.path, route.codeMd);
-  testMarkdownMap.set(route.path, route.testMd);
+  if (route.codeMd) {
+    uiMarkdownMap.set(route.path, route.codeMd);
+  }
+  if (route.testMd) {
+    testMarkdownMap.set(route.path, route.testMd);
+  }
 };
 
 export const AppRoutes = () => {

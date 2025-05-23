@@ -30,6 +30,10 @@ import Test from "../Tasks/Test/Test";
 import Mortgage from "../Tasks/Mortgage/Mortgage";
 import mortgageUiMarkdown from "../Tasks/Mortgage/uiMarkdown";
 import mortgageTestMarkdown from "../Tasks/Mortgage/testMarkdown";
+import FileExplorer from "../Tasks/FileExplorer/FileExplorer";
+import { fileTree } from "../Tasks/FileExplorer/mockFileTree";
+import fileExplorerUiMd from "../Tasks/FileExplorer/uiMarkdown";
+import fileExplorerTestMd from "../Tasks/FileExplorer/testMarkdown";
 
 export type RouteType = {
   id: number;
@@ -151,12 +155,22 @@ export const routes: RouteType[] = [
   },
   {
     id: 10,
+    title: "File Explorer",
+    description:
+      "A component that displays folders and files in a hierarchical tree format.",
+    name: "File Explorer",
+    path: "file-explorer",
+    component: FileExplorer,
+    props: { fileTree },
+    codeMd: fileExplorerUiMd,
+    testMd: fileExplorerTestMd,
+  },
+  {
+    id: 11,
     title: "Test",
     description: "",
     name: "Test",
     path: "test",
     component: Test,
-    // codeMd: jobBoardUiMarkdown,
-    // testMd: jobBoardTestMarkdown,
   },
 ];

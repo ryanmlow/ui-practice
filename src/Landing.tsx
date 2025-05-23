@@ -9,6 +9,7 @@ import todoListPreview from "./assets/todo-list.png";
 import digitalClockPreview from "./assets/digital-clock.png";
 import jobBoardPreview from "./assets/job-board.png";
 import mortgageCalculatorPreview from "./assets/mortgage-calculator.png";
+import fileExplorerPreview from "./assets/file-explorer.png";
 import { PATHS } from "./Routing/AppRoutes";
 
 const previewImgMap = [
@@ -47,6 +48,10 @@ const previewImgMap = [
   {
     titleRef: "Mortgage Calculator",
     link: mortgageCalculatorPreview,
+  },
+  {
+    titleRef: "File Explorer",
+    link: fileExplorerPreview,
   },
   {
     titleRef: "Test",
