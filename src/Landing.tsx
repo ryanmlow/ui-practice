@@ -10,6 +10,7 @@ import digitalClockPreview from "./assets/digital-clock.png";
 import jobBoardPreview from "./assets/job-board.png";
 import mortgageCalculatorPreview from "./assets/mortgage-calculator.png";
 import fileExplorerPreview from "./assets/file-explorer.png";
+import likeButtonPreview from "./assets/like-button.png";
 import { PATHS } from "./Routing/AppRoutes";
 
 const previewImgMap = [
@@ -52,6 +53,10 @@ const previewImgMap = [
   {
     titleRef: "File Explorer",
     link: fileExplorerPreview,
+  },
+  {
+    titleRef: "Like Button",
+    link: likeButtonPreview,
   },
   {
     titleRef: "Test",

@@ -34,6 +34,9 @@ import FileExplorer from "../Tasks/FileExplorer/FileExplorer";
 import { fileTree } from "../Tasks/FileExplorer/mockFileTree";
 import fileExplorerUiMd from "../Tasks/FileExplorer/uiMarkdown";
 import fileExplorerTestMd from "../Tasks/FileExplorer/testMarkdown";
+import LikeButton from "../Tasks/LikeButton/LikeButton";
+import likeButtonUiMarkdown from "../Tasks/LikeButton/uiMarkdown";
+import likeButtonTestMarkdown from "../Tasks/LikeButton/testMarkdown";
 
 export type RouteType = {
   id: number;
@@ -167,6 +170,17 @@ export const routes: RouteType[] = [
   },
   {
     id: 11,
+    title: "Like Button",
+    description:
+      "A Like button which appearance changes based on various states: Default, liked, hover, loading",
+    name: "like-button",
+    path: "like-button",
+    component: LikeButton,
+    codeMd: likeButtonUiMarkdown,
+    testMd: likeButtonTestMarkdown,
+  },
+  {
+    id: 12,
     title: "Test",
     description: "",
     name: "Test",
