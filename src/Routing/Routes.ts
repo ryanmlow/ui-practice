@@ -1,46 +1,65 @@
 import { UI_TASKS } from "@/enums/enums";
-import Accordion from "@/Tasks/Accordion/Accordion";
-import accordionConfig from "@/Tasks/Accordion/accordionConfig";
-import accordionTestMarkdown from "@/Tasks/Accordion/testMarkdown";
-import accordionCodeMarkdown from "@/Tasks/Accordion/uiMarkdown";
-import DiceRoller from "@/Tasks/DiceRoller/DiceRoller";
-import diceRollerTestMarkdown from "@/Tasks/DiceRoller/testMarkdown";
-import diceRollerUiMarkdown from "@/Tasks/DiceRoller/uiMarkdown";
-import DigitalClock from "@/Tasks/DigitalClock/DigitalClock";
-import digitalClockTestMarkdown from "@/Tasks/DigitalClock/testMarkdown";
-import digitalClockUiMarkdown from "@/Tasks/DigitalClock/uiMarkdown";
-import FileExplorer from "@/Tasks/FileExplorer/FileExplorer";
-import { fileTree } from "@/Tasks/FileExplorer/mockFileTree";
-import fileExplorerTestMd from "@/Tasks/FileExplorer/testMarkdown";
-import fileExplorerUiMd from "@/Tasks/FileExplorer/uiMarkdown";
-import JobBoard from "@/Tasks/JobBoard/JobBoard";
-import jobBoardTestMarkdown from "@/Tasks/JobBoard/testMarkdown";
-import jobBoardUiMarkdown from "@/Tasks/JobBoard/uiMarkdown";
-import LikeButton from "@/Tasks/LikeButton/LikeButton";
-import likeButtonTestMarkdown from "@/Tasks/LikeButton/testMarkdown";
-import likeButtonUiMarkdown from "@/Tasks/LikeButton/uiMarkdown";
-import Modal from "@/Tasks/Modal/Modal";
-import modalConfig from "@/Tasks/Modal/modalConfig";
-import modalTestMarkdown from "@/Tasks/Modal/testMarkdown";
-import modalUiMarkdown from "@/Tasks/Modal/uiMarkdown";
-import Mortgage from "@/Tasks/Mortgage/Mortgage";
-import mortgageTestMarkdown from "@/Tasks/Mortgage/testMarkdown";
-import mortgageUiMarkdown from "@/Tasks/Mortgage/uiMarkdown";
-import ProgressBar from "@/Tasks/ProgressBar/ProgressBar";
-import ProgressBarTestMarkdown from "@/Tasks/ProgressBar/testMarkdown";
-import ProgressBarUiMarkdown from "@/Tasks/ProgressBar/uiMarkdown";
-import Tabs from "@/Tasks/Tabs/Tabs";
-import tabsCodeMarkdown from "@/Tasks/Tabs/uiMarkdown";
-import tabsTestMarkdown from "@/Tasks/Tabs/testMardown";
+import {
+  Accordion,
+  accordionConfig,
+  accordionUiMarkdown,
+  accordionTestMarkdown,
+} from "@/Tasks/Accordion";
+import {
+  DiceRoller,
+  diceRollerUiMarkdown,
+  diceRollerTestMarkdown,
+} from "@/Tasks/DiceRoller";
+import {
+  DigitalClock,
+  digitalClockUiMarkdown,
+  digitalClockTestMarkdown,
+} from "@/Tasks/DigitalClock";
+import {
+  FileExplorer,
+  fileTree,
+  fileExplorerUiMd,
+  fileExplorerTestMd,
+} from "@/Tasks/FileExplorer";
+import {
+  JobBoard,
+  jobBoardUiMarkdown,
+  jobBoardTestMarkdown,
+} from "@/Tasks/JobBoard";
+import {
+  LikeButton,
+  likeButtonUiMarkdown,
+  likeButtonTestMarkdown,
+} from "@/Tasks/LikeButton";
+import {
+  Modal,
+  modalConfig,
+  modalUiMarkdown,
+  modalTestMarkdown,
+} from "@/Tasks/Modal";
+import {
+  Mortgage,
+  mortgageUiMarkdown,
+  mortgageTestMarkdown,
+} from "@/Tasks/Mortgage";
+import {
+  ProgressBar,
+  progressBarUiMarkdown,
+  progressBarTestMarkdown,
+} from "@/Tasks/ProgressBar";
+import { Tabs, tabsUiMarkdown, tabsTestMarkdown } from "@/Tasks/Tabs";
 import Test from "@/Tasks/Test/Test";
-import TestimonialCard, {
+import {
+  TestimonialCard,
   testimonialText,
-} from "@/Tasks/TestimonialCard/TestimonialCard";
-import testimonialCardTestCodeMd from "@/Tasks/TestimonialCard/testMarkdown";
-import testimonialCardCodeMd from "@/Tasks/TestimonialCard/uiMarkdown";
-import todoListTestMarkdown from "@/Tasks/TodoList/testMarkdown";
-import TodoList from "@/Tasks/TodoList/TodoList";
-import todoUiMarkdown from "@/Tasks/TodoList/uiMarkdown";
+  testimonialCardUiMarkdown,
+  testimonialCardTestMarkdown,
+} from "@/Tasks/TestimonialCard";
+import {
+  TodoList,
+  todoListUiMarkdown,
+  todoListTestMarkdown,
+} from "@/Tasks/TodoList";
 import { JSX } from "react";
 
 export type RouteType = {
@@ -70,8 +89,8 @@ export const routes: RouteType[] = [
       handle: "@sarahdole",
       testimonial: testimonialText,
     },
-    codeMd: testimonialCardCodeMd,
-    testMd: testimonialCardTestCodeMd,
+    codeMd: testimonialCardUiMarkdown,
+    testMd: testimonialCardTestMarkdown,
     source: "GreatFrontEnd",
   },
   {
@@ -83,7 +102,7 @@ export const routes: RouteType[] = [
     path: "accordion",
     component: Accordion,
     props: { accordionConfig },
-    codeMd: accordionCodeMarkdown,
+    codeMd: accordionUiMarkdown,
     testMd: accordionTestMarkdown,
     source: "GreatFrontEnd",
   },
@@ -96,7 +115,7 @@ export const routes: RouteType[] = [
     path: "tabs",
     component: Tabs,
     props: { tabs: ["HTML", "CSS", "Javascript"] },
-    codeMd: tabsCodeMarkdown,
+    codeMd: tabsUiMarkdown,
     testMd: tabsTestMarkdown,
     source: "GreatFrontEnd",
   },
@@ -108,8 +127,8 @@ export const routes: RouteType[] = [
     name: "Progress Bars",
     path: "progress-bars",
     component: ProgressBar,
-    codeMd: ProgressBarUiMarkdown,
-    testMd: ProgressBarTestMarkdown,
+    codeMd: progressBarUiMarkdown,
+    testMd: progressBarTestMarkdown,
     source: "GreatFrontEnd",
   },
   {
@@ -132,7 +151,7 @@ export const routes: RouteType[] = [
     name: "Todo list",
     path: "todo-list",
     component: TodoList,
-    codeMd: todoUiMarkdown,
+    codeMd: todoListUiMarkdown,
     testMd: todoListTestMarkdown,
     source: "GreatFrontEnd",
   },
