@@ -1,13 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import Landing from "../Landing";
 import { routes, RouteType } from "./Routes";
 import UiTask from "../pages/UiTask/UiTask";
 import { uiMarkdownMap } from "../pages/UiTask/uiMarkdownMap";
 import { testMarkdownMap } from "../pages/UiTask/testMarkdownMap";
-
-export enum PATHS {
-  UI_TASK = "ui-task",
-}
+import Landing from "../pages/Landing/Landing";
+import { PATHS } from "../enums/enums";
 
 const defaultRoutes = [
   {

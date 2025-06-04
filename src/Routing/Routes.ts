@@ -37,10 +37,15 @@ import fileExplorerTestMd from "../Tasks/FileExplorer/testMarkdown";
 import LikeButton from "../Tasks/LikeButton/LikeButton";
 import likeButtonUiMarkdown from "../Tasks/LikeButton/uiMarkdown";
 import likeButtonTestMarkdown from "../Tasks/LikeButton/testMarkdown";
+import Modal from "../Tasks/Modal/Modal";
+import modalConfig from "../Tasks/Modal/modalConfig";
+import modalUiMarkdown from "../Tasks/Modal/uiMarkdown";
+import modalTestMarkdown from "../Tasks/Modal/testMarkdown";
+import { UI_TASKS } from "../enums/enums";
 
 export type RouteType = {
   id: number;
-  title: string;
+  title: UI_TASKS;
   description: string;
   name: string;
   path: string;
@@ -48,12 +53,13 @@ export type RouteType = {
   props?: Record<string, unknown>;
   codeMd?: string;
   testMd?: string;
+  source?: string;
 };
 
 export const routes: RouteType[] = [
   {
     id: 1,
-    title: "Testimonial Card",
+    title: UI_TASKS.TESTIMONIAL_CARD,
     description:
       "A card featuring a user testimonial, including a profile image, name, username, and the testimonial body.",
     name: "Testimonial Card",
@@ -66,10 +72,11 @@ export const routes: RouteType[] = [
     },
     codeMd: testimonialCardCodeMd,
     testMd: testimonialCardTestCodeMd,
+    source: "GreatFrontEnd",
   },
   {
     id: 2,
-    title: "Accordion",
+    title: UI_TASKS.ACCORDION,
     description:
       "An Accordion component that displays a list of vertically stacked sections that each contain a title and content snippet.",
     name: "Accordion",
@@ -78,10 +85,11 @@ export const routes: RouteType[] = [
     props: { accordionConfig },
     codeMd: accordionCodeMarkdown,
     testMd: accordionTestMarkdown,
+    source: "GreatFrontEnd",
   },
   {
     id: 3,
-    title: "Tabs",
+    title: UI_TASKS.TABS,
     description:
       "A tabs component that displays one panel of content at a time depending on the active tab element.",
     name: "Tabs",
@@ -90,10 +98,11 @@ export const routes: RouteType[] = [
     props: { tabs: ["HTML", "CSS", "Javascript"] },
     codeMd: tabsCodeMarkdown,
     testMd: tabsTestMarkdown,
+    source: "GreatFrontEnd",
   },
   {
     id: 4,
-    title: "Progress Bars",
+    title: UI_TASKS.PROGRESS_BARS,
     description:
       "An app where clicking the 'Add' button adds progress bars to the page. The progress bars fill up gradually as soon as they are shown.",
     name: "Progress Bars",
@@ -101,10 +110,11 @@ export const routes: RouteType[] = [
     component: ProgressBar,
     codeMd: ProgressBarUiMarkdown,
     testMd: ProgressBarTestMarkdown,
+    source: "GreatFrontEnd",
   },
   {
     id: 5,
-    title: "Dice Roller",
+    title: UI_TASKS.DICE_ROLLER,
     description:
       "A dice roller app that simulates the results of rolling a specified number of 6-sided dice.",
     name: "Dice Roller",
@@ -112,10 +122,11 @@ export const routes: RouteType[] = [
     component: DiceRoller,
     codeMd: diceRollerUiMarkdown,
     testMd: diceRollerTestMarkdown,
+    source: "GreatFrontEnd",
   },
   {
     id: 6,
-    title: "Todo List",
+    title: UI_TASKS.TODO_LIST,
     description:
       "A simple todo list that allows users to add, remove, and mark tasks as completed.",
     name: "Todo list",
@@ -123,20 +134,22 @@ export const routes: RouteType[] = [
     component: TodoList,
     codeMd: todoUiMarkdown,
     testMd: todoListTestMarkdown,
+    source: "GreatFrontEnd",
   },
   {
     id: 7,
-    title: "Digital Clock",
+    title: UI_TASKS.DIGITAL_CLOCK,
     description: "A digital clock that shows the current time",
     name: "Digital Clock",
     path: "digital-clock",
     component: DigitalClock,
     codeMd: digitalClockUiMarkdown,
     testMd: digitalClockTestMarkdown,
+    source: "GreatFrontEnd",
   },
   {
     id: 8,
-    title: "Job Board",
+    title: UI_TASKS.JOB_BOARD,
     description:
       "A job board that displays the latest job postings fetched from the Hacker News API, with each posting displaying the job title, poster, and date posted.",
     name: "Job Board",
@@ -144,10 +157,11 @@ export const routes: RouteType[] = [
     component: JobBoard,
     codeMd: jobBoardUiMarkdown,
     testMd: jobBoardTestMarkdown,
+    source: "GreatFrontEnd",
   },
   {
     id: 9,
-    title: "Mortgage Calculator",
+    title: UI_TASKS.MORTGAGE_CALCULATOR,
     description:
       "A simple mortgage calculator widget that takes in a loan amount, interest rate, loan term, and calculates the monthly mortgage payment, total payment amount, and total interest paid.",
     name: "Mortgage Calculator",
@@ -155,10 +169,11 @@ export const routes: RouteType[] = [
     component: Mortgage,
     codeMd: mortgageUiMarkdown,
     testMd: mortgageTestMarkdown,
+    source: "GreatFrontEnd",
   },
   {
     id: 10,
-    title: "File Explorer",
+    title: UI_TASKS.FILE_EXPLORER,
     description:
       "A component that displays folders and files in a hierarchical tree format.",
     name: "File Explorer",
@@ -167,21 +182,36 @@ export const routes: RouteType[] = [
     props: { fileTree },
     codeMd: fileExplorerUiMd,
     testMd: fileExplorerTestMd,
+    source: "GreatFrontEnd",
   },
   {
     id: 11,
-    title: "Like Button",
+    title: UI_TASKS.LIKE_BUTTON,
     description:
       "A Like button which appearance changes based on various states: Default, liked, hover, loading",
-    name: "like-button",
+    name: "Like Button",
     path: "like-button",
     component: LikeButton,
     codeMd: likeButtonUiMarkdown,
     testMd: likeButtonTestMarkdown,
+    source: "GreatFrontEnd",
   },
   {
     id: 12,
-    title: "Test",
+    title: UI_TASKS.MODAL_DIALOG,
+    description:
+      "A reusable modal dialog component that can be opened and closed with customizable title and contents",
+    name: "Modal Dialog",
+    path: "modal-dialog",
+    component: Modal,
+    props: modalConfig,
+    codeMd: modalUiMarkdown,
+    testMd: modalTestMarkdown,
+    source: "GreatFrontEnd",
+  },
+  {
+    id: 13,
+    title: UI_TASKS.TEST,
     description: "",
     name: "Test",
     path: "test",
