@@ -1,9 +1,9 @@
 import { useLocation } from "react-router-dom";
-import CodeWrapper from "../../components/CodeWrapper";
-import SplitView from "../../layout/SplitView";
 import { JSX } from "react";
 import { uiMarkdownMap } from "./uiMarkdownMap";
 import { testMarkdownMap } from "./testMarkdownMap";
+import CodeWrapper from "@/components/CodeWrapper";
+import SplitView from "@/layout/SplitView";
 
 interface UiTaskProps {
   codeLabel: string;

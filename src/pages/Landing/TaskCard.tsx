@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { PATHS, UI_TASKS } from "../../enums/enums";
-import { RouteType } from "../../Routing/Routes";
-
+import { RouteType } from "@/Routing/Routes";
+import { PATHS, UI_TASKS } from "@/enums/enums";
 const TaskCard = ({
   card,
   updateActivePreview,

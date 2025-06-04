@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import useResizer from "../hooks/useResizer";
+import useResizer from "@/hooks/useResizer";
 
 const SplitView = ({
   leftChild,

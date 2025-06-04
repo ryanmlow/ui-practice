@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import { routes, RouteType } from "./Routes";
-import UiTask from "../pages/UiTask/UiTask";
-import { uiMarkdownMap } from "../pages/UiTask/uiMarkdownMap";
-import { testMarkdownMap } from "../pages/UiTask/testMarkdownMap";
-import Landing from "../pages/Landing/Landing";
-import { PATHS } from "../enums/enums";
+import { PATHS } from "@/enums/enums";
+import Landing from "@/pages/Landing/Landing";
+import { testMarkdownMap } from "@/pages/UiTask/testMarkdownMap";
+import { uiMarkdownMap } from "@/pages/UiTask/uiMarkdownMap";
+import UiTask from "@/pages/UiTask/UiTask";
 
 const defaultRoutes = [
   {

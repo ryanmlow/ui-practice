@@ -1,19 +1,19 @@
 import { useState } from "react";
-import accordionPreview from "../../assets/accordion.png";
-import tabsPreview from "../../assets/tabs.png";
-import progressBarPreview from "../../assets/progress-bars.png";
-import diceRollerPreview from "../../assets/dice-roller.png";
-import todoListPreview from "../../assets/todo-list.png";
-import digitalClockPreview from "../../assets/digital-clock.png";
-import jobBoardPreview from "../../assets/job-board.png";
-import mortgageCalculatorPreview from "../../assets/mortgage-calculator.png";
-import fileExplorerPreview from "../../assets/file-explorer.png";
-import likeButtonPreview from "../../assets/like-button.png";
-import modalPreview from "../../assets/modal.png";
-import { UI_TASKS } from "../../enums/enums";
-import { routes } from "../../Routing/Routes";
+import accordionPreview from "@/assets/accordion.png";
+import tabsPreview from "@/assets/tabs.png";
+import progressBarPreview from "@/assets/progress-bars.png";
+import diceRollerPreview from "@/assets/dice-roller.png";
+import todoListPreview from "@/assets/todo-list.png";
+import digitalClockPreview from "@/assets/digital-clock.png";
+import jobBoardPreview from "@/assets/job-board.png";
+import mortgageCalculatorPreview from "@/assets/mortgage-calculator.png";
+import fileExplorerPreview from "@/assets/file-explorer.png";
+import likeButtonPreview from "@/assets/like-button.png";
+import modalPreview from "@/assets/modal.png";
 import TaskCard from "./TaskCard";
 import Preview from "./Preview";
+import { UI_TASKS } from "@/enums/enums";
+import { routes } from "@/Routing/Routes";
 
 const previewImgMap: Record<UI_TASKS, string> = {
   [UI_TASKS.TESTIMONIAL_CARD]:

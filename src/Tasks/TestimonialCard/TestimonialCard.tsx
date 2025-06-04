@@ -1,4 +1,4 @@
-import thumbnail from "../../assets/profile-thumbnail.png";
+import thumbnail from "@/assets/profile-thumbnail.png";
 
 export const testimonialText =
   "I've been searching for high-quality abstract images for my design projects, and I'm thrilled to have found this platform. The variety and depth of creativity are astounding!";
