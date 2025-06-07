@@ -1,5 +1,4 @@
 import { JSX } from "react";
-import useResizer from "@/hooks/useResizer";
 
 const SplitView = ({
   leftChild,
@@ -8,27 +7,10 @@ const SplitView = ({
   leftChild: JSX.Element | string;
   rightChild: JSX.Element;
 }) => {
-  const { dividerPosition, handleMouseDown } = useResizer();
   return (
     <div className="flex flex-col lg:flex-row">
-      <div
-        className="bg-gray-600 py-4"
-        style={{ flexBasis: `${dividerPosition}%` }}
-      >
-        {leftChild}
-      </div>
-      <div
-        className="w-2 cursor-col-resize bg-gray-500 transition duration-200 hover:bg-gray-100"
-        onMouseDown={handleMouseDown}
-      />
-      <div
-        className="bg-gray-700 py-4"
-        style={{
-          flexBasis: `${100 - dividerPosition}%`,
-        }}
-      >
-        {rightChild}
-      </div>
+      <div className="flex-1/2 bg-gray-600 py-4">{leftChild}</div>
+      <div className="flex-1/2 bg-gray-700 py-4">{rightChild}</div>
     </div>
   );
 };

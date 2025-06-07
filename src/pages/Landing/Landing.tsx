@@ -10,6 +10,7 @@ import mortgageCalculatorPreview from "@/assets/mortgage-calculator.png";
 import fileExplorerPreview from "@/assets/file-explorer.png";
 import likeButtonPreview from "@/assets/like-button.png";
 import modalPreview from "@/assets/modal.png";
+import ticTacToePreview from "@/assets/tictactoe.png";
 import TaskCard from "./TaskCard";
 import Preview from "./Preview";
 import { UI_TASKS } from "@/enums/enums";
@@ -29,6 +30,7 @@ const previewImgMap: Record<UI_TASKS, string> = {
   [UI_TASKS.FILE_EXPLORER]: fileExplorerPreview,
   [UI_TASKS.LIKE_BUTTON]: likeButtonPreview,
   [UI_TASKS.MODAL_DIALOG]: modalPreview,
+  [UI_TASKS.TIC_TAC_TOE]: ticTacToePreview,
   [UI_TASKS.TEST]: "",
 };
 

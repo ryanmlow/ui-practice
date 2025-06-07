@@ -55,6 +55,7 @@ import {
   testimonialCardUiMarkdown,
   testimonialCardTestMarkdown,
 } from "@/Tasks/TestimonialCard";
+import { TicTacToe, ticTacToeUiMd, ticTacToeTestMd } from "@/Tasks/TicTacToe";
 import {
   TodoList,
   todoListUiMarkdown,
@@ -226,6 +227,17 @@ export const routes: RouteType[] = [
     props: modalConfig,
     codeMd: modalUiMarkdown,
     testMd: modalTestMarkdown,
+    source: "GreatFrontEnd",
+  },
+  {
+    id: 13,
+    title: UI_TASKS.TIC_TAC_TOE,
+    description: "A tic-tac-toe game that is playable by two players",
+    name: "Tic Tac Toe",
+    path: "tic-tac-toe",
+    component: TicTacToe,
+    codeMd: ticTacToeUiMd,
+    testMd: ticTacToeTestMd,
     source: "GreatFrontEnd",
   },
   {
