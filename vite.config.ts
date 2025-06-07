@@ -1,6 +1,6 @@
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "vitest/config";
+import { configDefaults, defineConfig } from "vitest/config";
 import path from "path";
 
 export default defineConfig({
@@ -16,6 +16,10 @@ export default defineConfig({
     environment: "jsdom",
     coverage: {
       reporter: ["text", "json", "html"],
+      exclude: [
+        ...configDefaults.exclude,
+        "src/Tasks/**/{testMarkdown,uiMarkdown,index}.ts",
+      ],
     },
     setupFiles: ["/vitest-setup.ts"],
   },

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { JSX } from "react";
 
 const Bar = () => {
@@ -49,7 +49,9 @@ const ProgressBar = () => {
       >
         Add
       </button>
-      {renderBars.map((bar) => bar)}
+      {renderBars.map((bar, idx) => (
+        <Fragment key={idx}>{bar}</Fragment>
+      ))}
     </>
   );
 };
