@@ -61,6 +61,12 @@ import {
   todoListUiMarkdown,
   todoListTestMarkdown,
 } from "@/Tasks/TodoList";
+import {
+  timeoutMap,
+  TrafficLight,
+  trafficLightTestMd,
+  trafficLightUiMd,
+} from "@/Tasks/TrafficLight";
 import { JSX } from "react";
 
 export type RouteType = {
@@ -241,7 +247,20 @@ export const routes: RouteType[] = [
     source: "GreatFrontEnd",
   },
   {
-    id: 13,
+    id: 14,
+    title: UI_TASKS.TRAFFIC_LIGHT,
+    description:
+      "A traffic light where the lights switch from green to yellow to red after predetermined intervals and loop indefinitely",
+    name: "Traffic Light",
+    path: "traffic-light",
+    component: TrafficLight,
+    props: { timeoutMap },
+    codeMd: trafficLightUiMd,
+    testMd: trafficLightTestMd,
+    source: "GreatFrontEnd",
+  },
+  {
+    id: 15,
     title: UI_TASKS.TEST,
     description: "",
     name: "Test",
