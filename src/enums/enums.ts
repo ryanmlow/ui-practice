@@ -17,5 +17,6 @@ export enum UI_TASKS {
   MODAL_DIALOG = "Modal Dialog",
   TIC_TAC_TOE = "Tic Tac Toe",
   TRAFFIC_LIGHT = "Traffic Light",
+  STAR_RATING = "Star Rating",
   TEST = "Test",
 }

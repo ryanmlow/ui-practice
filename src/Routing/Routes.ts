@@ -47,6 +47,11 @@ import {
   progressBarUiMarkdown,
   progressBarTestMarkdown,
 } from "@/Tasks/ProgressBar";
+import {
+  StarRating,
+  starRatingTestMarkdown,
+  starRatingUiMarkdown,
+} from "@/Tasks/StarRating";
 import { Tabs, tabsUiMarkdown, tabsTestMarkdown } from "@/Tasks/Tabs";
 import Test from "@/Tasks/Test/Test";
 import {
@@ -261,6 +266,19 @@ export const routes: RouteType[] = [
   },
   {
     id: 15,
+    title: UI_TASKS.STAR_RATING,
+    description:
+      "A star rating widget that allows users to select a rating value.",
+    name: "Star Rating",
+    path: "star-rating",
+    component: StarRating,
+    props: { maxStars: 5, currentRating: 2 },
+    codeMd: starRatingUiMarkdown,
+    testMd: starRatingTestMarkdown,
+    source: "GreatFrontEnd",
+  },
+  {
+    id: 16,
     title: UI_TASKS.TEST,
     description: "",
     name: "Test",
